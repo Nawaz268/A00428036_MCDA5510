@@ -1,0 +1,30 @@
+Oct 16, 2018 1:21:38 AM MySQLAccess setupConnection
+INFO: CONNECTED TO DATABASE
+Oct 16, 2018 1:22:26 AM Assignment2 main
+INFO: CREATE FUNCTION CALLED
+Oct 16, 2018 1:22:33 AM MySQLAccess getTransaction
+INFO: SELECTED ALL COLUMNS FROM TRANSACTION
+Oct 16, 2018 1:22:33 AM Assignment2 main
+INFO: VIEW FUNCTION CALLED
+Oct 16, 2018 1:23:34 AM MySQLAccess getTransaction
+INFO: SELECTED ALL COLUMNS FROM TRANSACTION
+Oct 16, 2018 1:23:34 AM Assignment2 main
+INFO: VIEW FUNCTION CALLED
+Oct 16, 2018 1:23:59 AM Assignment2 main
+INFO: DELETE FUNCTION CALLED
+Oct 16, 2018 1:24:04 AM Assignment2 main
+INFO: DELETE FUNCTION CALLED
+Oct 16, 2018 1:24:55 AM Assignment2 main
+INFO: CREATE FUNCTION CALLED
+Oct 16, 2018 1:25:11 AM Assignment2 main
+INFO: UPDATE FUNCTION CALLED
+Oct 16, 2018 1:25:14 AM Assignment2 main
+INFO: EXIT FUNCTION CALLED
+Oct 16, 2018 1:25:14 AM MySQLAccess getAllTransactions
+INFO: SELECTED ALL FIELDS FROM DATABASE
+Oct 16, 2018 1:25:14 AM Assignment2 main
+INFO: [ID: 909 , NameOnCard: HUSSAIN , CardNumber: 123456 , UnitPrice: 90.0 , Quantity: 0 , TotalPrice: 0.0 , ExpDate : 9/2025 , Created On 2018-10-16 01:24:55 , Created By: nawazhussain , Card Type  Other]
+Oct 16, 2018 1:25:29 AM Assignment2 main
+INFO: EXIT FUNCTION CALLED
+Oct 16, 2018 1:25:29 AM Assignment2 main
+INFO: Total execution time: 231138 ms
