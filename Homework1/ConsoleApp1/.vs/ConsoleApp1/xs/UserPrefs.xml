@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{1F6C4EB0-FE9F-4E0E-8C8D-F5722ACDA3E6}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ConsoleApp1/Program.cs">
+    <Files>
+      <File FileName="ConsoleApp1/Program.cs" Line="152" Column="61" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint enabled="false" file="/Users/nawazhussain/Desktop/GitHub Repos/WindowsProjects/Console1Update/ConsoleApp1/ConsoleApp1/Program.cs" relfile="ConsoleApp1/Program.cs" line="54" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.ConsoleApp1 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

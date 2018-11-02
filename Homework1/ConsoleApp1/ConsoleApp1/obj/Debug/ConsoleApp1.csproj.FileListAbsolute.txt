@@ -1,0 +1,7 @@
+/Users/nawazhussain/Desktop/GitHub Repos/WindowsProjects/Console1Update/ConsoleApp1/ConsoleApp1/bin/Debug/ConsoleApp1.exe.config
+/Users/nawazhussain/Desktop/GitHub Repos/WindowsProjects/Console1Update/ConsoleApp1/ConsoleApp1/bin/Debug/ConsoleApp1.exe
+/Users/nawazhussain/Desktop/GitHub Repos/WindowsProjects/Console1Update/ConsoleApp1/ConsoleApp1/bin/Debug/ConsoleApp1.pdb
+/Users/nawazhussain/Desktop/GitHub Repos/WindowsProjects/Console1Update/ConsoleApp1/ConsoleApp1/obj/Debug/ConsoleApp1.csprojAssemblyReference.cache
+/Users/nawazhussain/Desktop/GitHub Repos/WindowsProjects/Console1Update/ConsoleApp1/ConsoleApp1/obj/Debug/ConsoleApp1.csproj.CoreCompileInputs.cache
+/Users/nawazhussain/Desktop/GitHub Repos/WindowsProjects/Console1Update/ConsoleApp1/ConsoleApp1/obj/Debug/ConsoleApp1.exe
+/Users/nawazhussain/Desktop/GitHub Repos/WindowsProjects/Console1Update/ConsoleApp1/ConsoleApp1/obj/Debug/ConsoleApp1.pdb
