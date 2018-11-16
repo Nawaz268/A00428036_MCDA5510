@@ -15,51 +15,59 @@ public class Assignment2 {
 		MySQLAccess dao = new MySQLAccess();
 
 		try {
+			
+			Transaction t = new Transaction();
 
 			Connection connection = dao.setupConnection();
 
 			while (true) {
-				System.out.println("Press\n(1) CREATE\n(2) VIEW\n(3) DELETE\n(4) UPDATE\n(5) SHOW ALL RECORDS\n(6) EXIT\n\n ");
+				
+				System.out.println("Press\n(1) CREATE\n(2) GET\n(3) DELETE\n(4) UPDATE\n(5) SHOW ALL RECORDS\n(6) EXIT\n ");
 				Scanner in = new Scanner(System.in);
 				int select = in.nextInt();
-				// dao.createTransaction(Transaction,connection,resultSet);
+				
 
 				if (select == 1) {
-
-					dao.createTransaction(connection);
-					Logger.getAnonymousLogger().log(Level.INFO, "CREATE FUNCTION CALLED");
+					
+					
+					
+					dao.createTransaction(connection, t);
+					
+					
 
 				}
 				if (select == 2) {
 
 					System.out.println("ID :\n");
 					int id = in.nextInt();
-					Transaction res = dao.getTransaction(id, connection);
+					t.setiD(id);
+					t= dao.getTransaction(t, connection);
 					Logger.getAnonymousLogger().log(Level.INFO, "VIEW FUNCTION CALLED");
-					System.out.println(res.toString() + "\n");
+					System.out.println(t.toString() + "\n");
 
 				}
 				if (select == 3) {
-					do {
+					
 						System.out.println("ID : \n");
+						
 						int id = in.nextInt();
-						dao.removeTransaction(id, connection);
+						t.setiD(id);
+						dao.removeTransaction(t , connection);
 						Logger.getAnonymousLogger().log(Level.INFO, "DELETE FUNCTION CALLED");
-						System.out.println(
-								"\n PRESS Y TO CONTINUE DELETING OR ANYOTHER KEY TO PROCEED TO MAIN MENU \n\n");
-					} while ((in.next().equalsIgnoreCase("y")) || (in.next().equalsIgnoreCase("Y")));
+						
 				}
 				if (select == 4) {
 					System.out.println("ID :\n ");
 					int id = in.nextInt();
-					dao.updateTransaction(id, connection);
+					t.setiD(id);
+					dao.updateTransaction( t,connection);
 					Logger.getAnonymousLogger().log(Level.INFO, "UPDATE FUNCTION CALLED");
 				}
 
 				if (select == 5) {
-					Logger.getAnonymousLogger().log(Level.INFO, "EXIT FUNCTION CALLED");
+					Logger.getAnonymousLogger().log(Level.INFO, "SHOW ALL RECORDS FUNCTION CALLED");
 					Collection<Transaction> trxns = dao.getAllTransactions(connection);
-					// dao.insertFunction(connection);
+					
 					for (Transaction trxn : trxns) {
 						Logger.getAnonymousLogger().log(Level.INFO, trxn.toString());
 						
@@ -70,6 +78,7 @@ public class Assignment2 {
 				if (select == 6) {
 					
 					Logger.getAnonymousLogger().log(Level.INFO, "EXIT FUNCTION CALLED");
+					in.close();
 					break;
 				}
 				

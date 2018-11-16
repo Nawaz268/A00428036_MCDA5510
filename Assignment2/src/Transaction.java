@@ -1,17 +1,17 @@
 
 public class Transaction {
 
-	private int iD;
+	private int iD = 0;
 	
 	private String nameOnCard;
 	
 	private String cardNumber;
 	
-	private float unitPrice;
+	private double unitPrice = 0.0;
 	
 	private int quantity;
 	
-	private float totalPrice;
+	private double totalPrice;
 	
 	private String expDate;
 	
@@ -34,10 +34,10 @@ public class Transaction {
 	public void setiD(int iD) {
 		this.iD = iD;
 	}
-	public float getUnitPrice() {
+	public double getUnitPrice() {
 		return unitPrice;
 	}
-	public void setUnitPrice(float unitPrice) {
+	public void setUnitPrice(double unitPrice) {
 		this.unitPrice = unitPrice;
 	}
 	public int getQuantity() {
@@ -46,10 +46,10 @@ public class Transaction {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	public float getTotalPrice() {
+	public double getTotalPrice() {
 		return totalPrice;
 	}
-	public void setTotalPrice(float totalPrice) {
+	public void setTotalPrice(double totalPrice) {
 		this.totalPrice = totalPrice;
 	}
 	public String getExpDate() {

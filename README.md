@@ -14,6 +14,7 @@ Uploaded Assignment 1 on GitHub.
 - Assignment 2 -
 
 Uploaded Assignment 2 on Github.
+Assignment 2 Updated on Github.
 
 - Homework 1 -
 
