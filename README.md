@@ -16,6 +16,11 @@ Uploaded Assignment 1 on GitHub.
 Uploaded Assignment 2 on Github.
 Assignment 2 Updated on Github.
 
+- Assignment 3 -
+
+Uploaded Assignment 3 on Github
+Version 1.0 uploaded. All 4 functions of CRUD Implemented.
+
 - Homework 1 -
 
 Uploaded homework 1 on Github. Homework 1 is Windows Project where I modified code uploaded by Mr. Dan Penny.
