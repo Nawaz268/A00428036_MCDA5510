@@ -22,6 +22,8 @@ Uploaded Assignment 3 on Github
 Version 1.0 uploaded. All 4 functions of CRUD Implemented.
 Version 2.0 uploaded. Minor changes incorporated.
 
+* I bymistakenly named the package as MCDS5510 instead of MCDA5510 as it was in the Question Paper. Also, my class which will run on the webservice is called UserInput.
+
 - Homework 1 -
 
 Uploaded homework 1 on Github. Homework 1 is Windows Project where I modified code uploaded by Mr. Dan Penny.
