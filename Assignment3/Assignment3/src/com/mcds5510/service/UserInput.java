@@ -1,6 +1,5 @@
 package com.mcds5510.service;
 
-
 import java.sql.SQLException;
 import com.mcds5510.dao.*;
 import com.mcds5510.entity.*;
@@ -10,17 +9,15 @@ public class UserInput {
 	public String createEntry(int ID, String NameOnCard, String CardNumber, double UnitPrice, int Quantity, int Month,
 			int Year) throws Exception {
 
-		
+		int count = 0;
+		MySQLAccess MS = new MySQLAccess();
 
-			int count = 0;
-			MySQLAccess MS = new MySQLAccess();
+		Transaction trxn = new Transaction();
 
-			Transaction trxn = new Transaction();
+		trxn.setiD(ID);
 
-			trxn.setiD(ID);
-			
-			String output = "";
-			try {
+		String output = "";
+		try {
 			if (NameOnCard.matches(".*[;:!@#$%^*+?<>].*")) {
 				count++;
 			}
@@ -82,7 +79,7 @@ public class UserInput {
 			if (count == 0)
 
 			{
-				
+
 				output = MS.createTransaction(trxn);
 				System.out.println(output);
 				return output;
@@ -92,7 +89,7 @@ public class UserInput {
 				output = "Failure User Creation, Wrong Entry's Detected.";
 				System.out.println(output);
 				return output;
-				
+
 			}
 
 		} catch (Exception e) {
@@ -117,7 +114,6 @@ public class UserInput {
 		return result;
 	}
 
-	
 	public String updateEntry(String ID, String NameOnCard, String CardNumber, String UnitPrice, String Quantity,
 			String Month, String Year) {
 
@@ -144,13 +140,13 @@ public class UserInput {
 
 			else {
 				count++;
-				
+
 			}
 
 			if (NameOnCard != null) {
 				if (NameOnCard.matches(".*[;:!@#$%^*+?<>].*")) {
 					count++;
-					
+
 				}
 
 				else {
@@ -163,12 +159,10 @@ public class UserInput {
 				if (CardNumber.matches(".*[;:!@#$%^*+?<>].*")) {
 
 					count++;
-					
 
 				} else {
-					
+
 					trxn.setCardNumber(CardNumber);
-					
 
 					String CardType = "";
 					if (CardNumber.matches("^[5][1-5].*") && CardNumber.length() == 16) {
@@ -193,11 +187,11 @@ public class UserInput {
 			if (UnitPrice != null)
 
 			{
-				
+
 				unitPrice = true;
 				tempUnitPrice = Double.parseDouble(UnitPrice);
 				trxn.setUnitPrice(tempUnitPrice);
-				
+
 			}
 
 			if (Quantity != null)
@@ -217,7 +211,7 @@ public class UserInput {
 				tempMonth = Integer.parseInt(Month);
 				if (tempMonth > 12 || tempMonth < 0) {
 					count++;
-					
+
 				} else {
 					;
 				}
@@ -247,10 +241,7 @@ public class UserInput {
 				output = MS.updateTransaction(trxn);
 			} else {
 				output = "Sorry, Input Values for update were incorrect.";
-				
-				return output;
-			
-				
+
 			}
 
 		} catch (Exception e) {
@@ -261,4 +252,5 @@ public class UserInput {
 		return output;
 
 	}
+
 }

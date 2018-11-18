@@ -44,16 +44,16 @@ public class UserInputProxy implements com.mcds5510.service.UserInput {
     return userInput;
   }
   
-  public java.lang.String createEntry(int ID, java.lang.String nameOnCard, java.lang.String cardNumber, double unitPrice, int quantity, int month, int year) throws java.rmi.RemoteException{
-    if (userInput == null)
-      _initUserInputProxy();
-    return userInput.createEntry(ID, nameOnCard, cardNumber, unitPrice, quantity, month, year);
-  }
-  
   public java.lang.String updateEntry(java.lang.String ID, java.lang.String nameOnCard, java.lang.String cardNumber, java.lang.String unitPrice, java.lang.String quantity, java.lang.String month, java.lang.String year) throws java.rmi.RemoteException{
     if (userInput == null)
       _initUserInputProxy();
     return userInput.updateEntry(ID, nameOnCard, cardNumber, unitPrice, quantity, month, year);
+  }
+  
+  public java.lang.String createEntry(int ID, java.lang.String nameOnCard, java.lang.String cardNumber, double unitPrice, int quantity, int month, int year) throws java.rmi.RemoteException{
+    if (userInput == null)
+      _initUserInputProxy();
+    return userInput.createEntry(ID, nameOnCard, cardNumber, unitPrice, quantity, month, year);
   }
   
   public java.lang.String deleteEntry(int ID) throws java.rmi.RemoteException{

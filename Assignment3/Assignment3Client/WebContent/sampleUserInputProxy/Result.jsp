@@ -64,7 +64,10 @@ break;
 case 13:
         gotMethod = true;
         String ID_1id=  request.getParameter("ID16");
-        int ID_1idTemp  = Integer.parseInt(ID_1id);
+            java.lang.String ID_1idTemp = null;
+        if(!ID_1id.equals("")){
+         ID_1idTemp  = ID_1id;
+        }
         String nameOnCard_2id=  request.getParameter("nameOnCard18");
             java.lang.String nameOnCard_2idTemp = null;
         if(!nameOnCard_2id.equals("")){
@@ -76,20 +79,32 @@ case 13:
          cardNumber_3idTemp  = cardNumber_3id;
         }
         String unitPrice_4id=  request.getParameter("unitPrice22");
-        double unitPrice_4idTemp  = Double.parseDouble(unitPrice_4id);
+            java.lang.String unitPrice_4idTemp = null;
+        if(!unitPrice_4id.equals("")){
+         unitPrice_4idTemp  = unitPrice_4id;
+        }
         String quantity_5id=  request.getParameter("quantity24");
-        int quantity_5idTemp  = Integer.parseInt(quantity_5id);
+            java.lang.String quantity_5idTemp = null;
+        if(!quantity_5id.equals("")){
+         quantity_5idTemp  = quantity_5id;
+        }
         String month_6id=  request.getParameter("month26");
-        int month_6idTemp  = Integer.parseInt(month_6id);
+            java.lang.String month_6idTemp = null;
+        if(!month_6id.equals("")){
+         month_6idTemp  = month_6id;
+        }
         String year_7id=  request.getParameter("year28");
-        int year_7idTemp  = Integer.parseInt(year_7id);
-        java.lang.String createEntry13mtemp = sampleUserInputProxyid.createEntry(ID_1idTemp,nameOnCard_2idTemp,cardNumber_3idTemp,unitPrice_4idTemp,quantity_5idTemp,month_6idTemp,year_7idTemp);
-if(createEntry13mtemp == null){
+            java.lang.String year_7idTemp = null;
+        if(!year_7id.equals("")){
+         year_7idTemp  = year_7id;
+        }
+        java.lang.String updateEntry13mtemp = sampleUserInputProxyid.updateEntry(ID_1idTemp,nameOnCard_2idTemp,cardNumber_3idTemp,unitPrice_4idTemp,quantity_5idTemp,month_6idTemp,year_7idTemp);
+if(updateEntry13mtemp == null){
 %>
-<%=createEntry13mtemp %>
+<%=updateEntry13mtemp %>
 <%
 }else{
-        String tempResultreturnp14 = org.eclipse.jst.ws.util.JspUtils.markup(String.valueOf(createEntry13mtemp));
+        String tempResultreturnp14 = org.eclipse.jst.ws.util.JspUtils.markup(String.valueOf(updateEntry13mtemp));
         %>
         <%= tempResultreturnp14 %>
         <%
@@ -98,10 +113,7 @@ break;
 case 30:
         gotMethod = true;
         String ID_8id=  request.getParameter("ID33");
-            java.lang.String ID_8idTemp = null;
-        if(!ID_8id.equals("")){
-         ID_8idTemp  = ID_8id;
-        }
+        int ID_8idTemp  = Integer.parseInt(ID_8id);
         String nameOnCard_9id=  request.getParameter("nameOnCard35");
             java.lang.String nameOnCard_9idTemp = null;
         if(!nameOnCard_9id.equals("")){
@@ -113,32 +125,20 @@ case 30:
          cardNumber_10idTemp  = cardNumber_10id;
         }
         String unitPrice_11id=  request.getParameter("unitPrice39");
-            java.lang.String unitPrice_11idTemp = null;
-        if(!unitPrice_11id.equals("")){
-         unitPrice_11idTemp  = unitPrice_11id;
-        }
+        double unitPrice_11idTemp  = Double.parseDouble(unitPrice_11id);
         String quantity_12id=  request.getParameter("quantity41");
-            java.lang.String quantity_12idTemp = null;
-        if(!quantity_12id.equals("")){
-         quantity_12idTemp  = quantity_12id;
-        }
+        int quantity_12idTemp  = Integer.parseInt(quantity_12id);
         String month_13id=  request.getParameter("month43");
-            java.lang.String month_13idTemp = null;
-        if(!month_13id.equals("")){
-         month_13idTemp  = month_13id;
-        }
+        int month_13idTemp  = Integer.parseInt(month_13id);
         String year_14id=  request.getParameter("year45");
-            java.lang.String year_14idTemp = null;
-        if(!year_14id.equals("")){
-         year_14idTemp  = year_14id;
-        }
-        java.lang.String updateEntry30mtemp = sampleUserInputProxyid.updateEntry(ID_8idTemp,nameOnCard_9idTemp,cardNumber_10idTemp,unitPrice_11idTemp,quantity_12idTemp,month_13idTemp,year_14idTemp);
-if(updateEntry30mtemp == null){
+        int year_14idTemp  = Integer.parseInt(year_14id);
+        java.lang.String createEntry30mtemp = sampleUserInputProxyid.createEntry(ID_8idTemp,nameOnCard_9idTemp,cardNumber_10idTemp,unitPrice_11idTemp,quantity_12idTemp,month_13idTemp,year_14idTemp);
+if(createEntry30mtemp == null){
 %>
-<%=updateEntry30mtemp %>
+<%=createEntry30mtemp %>
 <%
 }else{
-        String tempResultreturnp31 = org.eclipse.jst.ws.util.JspUtils.markup(String.valueOf(updateEntry30mtemp));
+        String tempResultreturnp31 = org.eclipse.jst.ws.util.JspUtils.markup(String.valueOf(createEntry30mtemp));
         %>
         <%= tempResultreturnp31 %>
         <%

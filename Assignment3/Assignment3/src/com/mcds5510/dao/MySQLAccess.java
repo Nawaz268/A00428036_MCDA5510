@@ -1,6 +1,5 @@
 package com.mcds5510.dao;
 
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -20,7 +19,6 @@ public class MySQLAccess {
 		Connection connection = DBConnection.getDBConnection();
 
 		int count = 0;
-		boolean check = false;
 		String output = "";
 
 		Statement statement = null;
@@ -59,7 +57,6 @@ public class MySQLAccess {
 			}
 
 			else {
-				// System.out.println("ID ALREADY EXISTS. PLEASE USE UPDATE INSTEAD \n\n");
 
 				output = "Unsuccesful Entry Creation.";
 
@@ -300,7 +297,7 @@ public class MySQLAccess {
 					output = "Expiry Month Updated";
 
 				}
-			
+
 			}
 
 		} catch (SQLException e) {
@@ -308,6 +305,7 @@ public class MySQLAccess {
 			Logger.getAnonymousLogger().log(Level.SEVERE, "EXCEPTION AT MYSQLACCESS.JAVA");
 			e.printStackTrace();
 		}
+		output = "Update Success.";
 		return output;
 	}
 

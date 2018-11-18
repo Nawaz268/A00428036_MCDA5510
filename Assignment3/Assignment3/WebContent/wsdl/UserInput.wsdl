@@ -4,26 +4,6 @@
 Built on Apr 22, 2006 (06:55:48 PDT)-->
  <wsdl:types>
   <schema elementFormDefault="qualified" targetNamespace="http://service.mcds5510.com" xmlns="http://www.w3.org/2001/XMLSchema">
-   <element name="createEntry">
-    <complexType>
-     <sequence>
-      <element name="ID" type="xsd:int"/>
-      <element name="NameOnCard" type="xsd:string"/>
-      <element name="CardNumber" type="xsd:string"/>
-      <element name="UnitPrice" type="xsd:double"/>
-      <element name="Quantity" type="xsd:int"/>
-      <element name="Month" type="xsd:int"/>
-      <element name="Year" type="xsd:int"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="createEntryResponse">
-    <complexType>
-     <sequence>
-      <element name="createEntryReturn" type="xsd:string"/>
-     </sequence>
-    </complexType>
-   </element>
    <element name="updateEntry">
     <complexType>
      <sequence>
@@ -41,6 +21,26 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
     <complexType>
      <sequence>
       <element name="updateEntryReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="createEntry">
+    <complexType>
+     <sequence>
+      <element name="ID" type="xsd:int"/>
+      <element name="NameOnCard" type="xsd:string"/>
+      <element name="CardNumber" type="xsd:string"/>
+      <element name="UnitPrice" type="xsd:double"/>
+      <element name="Quantity" type="xsd:int"/>
+      <element name="Month" type="xsd:int"/>
+      <element name="Year" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="createEntryResponse">
+    <complexType>
+     <sequence>
+      <element name="createEntryReturn" type="xsd:string"/>
      </sequence>
     </complexType>
    </element>
@@ -141,18 +141,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    <wsdl:portType name="UserInput">
 
-      <wsdl:operation name="createEntry">
-
-         <wsdl:input message="impl:createEntryRequest" name="createEntryRequest">
-
-       </wsdl:input>
-
-         <wsdl:output message="impl:createEntryResponse" name="createEntryResponse">
-
-       </wsdl:output>
-
-      </wsdl:operation>
-
       <wsdl:operation name="updateEntry">
 
          <wsdl:input message="impl:updateEntryRequest" name="updateEntryRequest">
@@ -160,6 +148,18 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
        </wsdl:input>
 
          <wsdl:output message="impl:updateEntryResponse" name="updateEntryResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createEntry">
+
+         <wsdl:input message="impl:createEntryRequest" name="createEntryRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:createEntryResponse" name="createEntryResponse">
 
        </wsdl:output>
 
@@ -195,24 +195,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
 
-      <wsdl:operation name="createEntry">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="createEntryRequest">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="createEntryResponse">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:output>
-
-      </wsdl:operation>
-
       <wsdl:operation name="updateEntry">
 
          <wsdlsoap:operation soapAction=""/>
@@ -224,6 +206,24 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
          </wsdl:input>
 
          <wsdl:output name="updateEntryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createEntry">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createEntryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createEntryResponse">
 
             <wsdlsoap:body use="literal"/>
 
