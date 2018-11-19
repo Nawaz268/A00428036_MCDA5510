@@ -7,8 +7,8 @@
   <ns1:parameter name="dotNetSoapEncFix" value="true"/>
   <ns1:parameter name="enableNamespacePrefixOptimization" value="false"/>
   <ns1:parameter name="sendXMLDeclaration" value="true"/>
-  <ns1:parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
   <ns1:parameter name="sendXsiTypes" value="true"/>
+  <ns1:parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
   <ns1:requestFlow>
    <ns1:handler type="java:org.apache.axis.handlers.JWSHandler">
     <ns1:parameter name="scope" value="session"/>
@@ -51,10 +51,10 @@
    <ns1:parameter qname="ns2:Month" type="xsd:int"/>
    <ns1:parameter qname="ns2:Year" type="xsd:int"/>
   </ns1:operation>
-  <ns1:operation name="deleteEntry" qname="ns3:deleteEntry" returnQName="ns3:deleteEntryReturn" returnType="xsd:string" soapAction="" xmlns:ns3="http://service.mcds5510.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ns1:operation name="getEntry" qname="ns3:getEntry" returnQName="ns3:getEntryReturn" returnType="xsd:string" soapAction="" xmlns:ns3="http://service.mcds5510.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
    <ns1:parameter qname="ns3:ID" type="xsd:int"/>
   </ns1:operation>
-  <ns1:operation name="getEntry" qname="ns4:getEntry" returnQName="ns4:getEntryReturn" returnType="xsd:string" soapAction="" xmlns:ns4="http://service.mcds5510.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ns1:operation name="deleteEntry" qname="ns4:deleteEntry" returnQName="ns4:deleteEntryReturn" returnType="xsd:string" soapAction="" xmlns:ns4="http://service.mcds5510.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
    <ns1:parameter qname="ns4:ID" type="xsd:int"/>
   </ns1:operation>
   <ns1:parameter name="allowedMethods" value="createEntry deleteEntry updateEntry getEntry"/>

@@ -38,10 +38,10 @@
         <parameter qname="pns:Month" xmlns:pns="http://service.mcds5510.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
         <parameter qname="pns:Year" xmlns:pns="http://service.mcds5510.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
       </operation>
-      <operation name="deleteEntry" qname="operNS:deleteEntry" xmlns:operNS="http://service.mcds5510.com" returnQName="retNS:deleteEntryReturn" xmlns:retNS="http://service.mcds5510.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      <operation name="getEntry" qname="operNS:getEntry" xmlns:operNS="http://service.mcds5510.com" returnQName="retNS:getEntryReturn" xmlns:retNS="http://service.mcds5510.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
         <parameter qname="pns:ID" xmlns:pns="http://service.mcds5510.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
       </operation>
-      <operation name="getEntry" qname="operNS:getEntry" xmlns:operNS="http://service.mcds5510.com" returnQName="retNS:getEntryReturn" xmlns:retNS="http://service.mcds5510.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      <operation name="deleteEntry" qname="operNS:deleteEntry" xmlns:operNS="http://service.mcds5510.com" returnQName="retNS:deleteEntryReturn" xmlns:retNS="http://service.mcds5510.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
         <parameter qname="pns:ID" xmlns:pns="http://service.mcds5510.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
       </operation>
       <parameter name="allowedMethods" value="createEntry deleteEntry updateEntry getEntry"/>

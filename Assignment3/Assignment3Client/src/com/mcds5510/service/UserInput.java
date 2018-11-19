@@ -10,6 +10,6 @@ package com.mcds5510.service;
 public interface UserInput extends java.rmi.Remote {
     public java.lang.String updateEntry(java.lang.String ID, java.lang.String nameOnCard, java.lang.String cardNumber, java.lang.String unitPrice, java.lang.String quantity, java.lang.String month, java.lang.String year) throws java.rmi.RemoteException;
     public java.lang.String createEntry(int ID, java.lang.String nameOnCard, java.lang.String cardNumber, double unitPrice, int quantity, int month, int year) throws java.rmi.RemoteException;
-    public java.lang.String deleteEntry(int ID) throws java.rmi.RemoteException;
     public java.lang.String getEntry(int ID) throws java.rmi.RemoteException;
+    public java.lang.String deleteEntry(int ID) throws java.rmi.RemoteException;
 }

@@ -148,13 +148,13 @@ case 47:
         gotMethod = true;
         String ID_15id=  request.getParameter("ID50");
         int ID_15idTemp  = Integer.parseInt(ID_15id);
-        java.lang.String deleteEntry47mtemp = sampleUserInputProxyid.deleteEntry(ID_15idTemp);
-if(deleteEntry47mtemp == null){
+        java.lang.String getEntry47mtemp = sampleUserInputProxyid.getEntry(ID_15idTemp);
+if(getEntry47mtemp == null){
 %>
-<%=deleteEntry47mtemp %>
+<%=getEntry47mtemp %>
 <%
 }else{
-        String tempResultreturnp48 = org.eclipse.jst.ws.util.JspUtils.markup(String.valueOf(deleteEntry47mtemp));
+        String tempResultreturnp48 = org.eclipse.jst.ws.util.JspUtils.markup(String.valueOf(getEntry47mtemp));
         %>
         <%= tempResultreturnp48 %>
         <%
@@ -164,13 +164,13 @@ case 52:
         gotMethod = true;
         String ID_16id=  request.getParameter("ID55");
         int ID_16idTemp  = Integer.parseInt(ID_16id);
-        java.lang.String getEntry52mtemp = sampleUserInputProxyid.getEntry(ID_16idTemp);
-if(getEntry52mtemp == null){
+        java.lang.String deleteEntry52mtemp = sampleUserInputProxyid.deleteEntry(ID_16idTemp);
+if(deleteEntry52mtemp == null){
 %>
-<%=getEntry52mtemp %>
+<%=deleteEntry52mtemp %>
 <%
 }else{
-        String tempResultreturnp53 = org.eclipse.jst.ws.util.JspUtils.markup(String.valueOf(getEntry52mtemp));
+        String tempResultreturnp53 = org.eclipse.jst.ws.util.JspUtils.markup(String.valueOf(deleteEntry52mtemp));
         %>
         <%= tempResultreturnp53 %>
         <%

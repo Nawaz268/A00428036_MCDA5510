@@ -44,20 +44,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
      </sequence>
     </complexType>
    </element>
-   <element name="deleteEntry">
-    <complexType>
-     <sequence>
-      <element name="ID" type="xsd:int"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="deleteEntryResponse">
-    <complexType>
-     <sequence>
-      <element name="deleteEntryReturn" type="xsd:string"/>
-     </sequence>
-    </complexType>
-   </element>
    <element name="getEntry">
     <complexType>
      <sequence>
@@ -69,6 +55,20 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
     <complexType>
      <sequence>
       <element name="getEntryReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteEntry">
+    <complexType>
+     <sequence>
+      <element name="ID" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteEntryResponse">
+    <complexType>
+     <sequence>
+      <element name="deleteEntryReturn" type="xsd:string"/>
      </sequence>
     </complexType>
    </element>
@@ -165,18 +165,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="deleteEntry">
-
-         <wsdl:input message="impl:deleteEntryRequest" name="deleteEntryRequest">
-
-       </wsdl:input>
-
-         <wsdl:output message="impl:deleteEntryResponse" name="deleteEntryResponse">
-
-       </wsdl:output>
-
-      </wsdl:operation>
-
       <wsdl:operation name="getEntry">
 
          <wsdl:input message="impl:getEntryRequest" name="getEntryRequest">
@@ -184,6 +172,18 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
        </wsdl:input>
 
          <wsdl:output message="impl:getEntryResponse" name="getEntryResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteEntry">
+
+         <wsdl:input message="impl:deleteEntryRequest" name="deleteEntryRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:deleteEntryResponse" name="deleteEntryResponse">
 
        </wsdl:output>
 
@@ -231,24 +231,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="deleteEntry">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="deleteEntryRequest">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="deleteEntryResponse">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:output>
-
-      </wsdl:operation>
-
       <wsdl:operation name="getEntry">
 
          <wsdlsoap:operation soapAction=""/>
@@ -260,6 +242,24 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
          </wsdl:input>
 
          <wsdl:output name="getEntryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteEntry">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteEntryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteEntryResponse">
 
             <wsdlsoap:body use="literal"/>
 

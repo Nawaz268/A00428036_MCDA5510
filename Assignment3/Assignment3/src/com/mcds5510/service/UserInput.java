@@ -130,6 +130,9 @@ public class UserInput {
 		int tempQuantity = 0;
 		int tempMonth = 0;
 		int tempYear = 0;
+		boolean month = false;
+		boolean year = false;
+
 		try {
 
 			if (ID != null) {
@@ -209,11 +212,11 @@ public class UserInput {
 
 			if (Month != null) {
 				tempMonth = Integer.parseInt(Month);
-				if (tempMonth > 12 || tempMonth < 0) {
+				if (tempMonth > 12 || tempMonth < 1) {
 					count++;
 
 				} else {
-					;
+					month = true;
 				}
 			}
 
@@ -222,7 +225,7 @@ public class UserInput {
 				if (tempYear < 2015 || tempYear > 2032) {
 					count++;
 				} else {
-					;
+					year = true;
 				}
 			}
 
@@ -233,8 +236,11 @@ public class UserInput {
 
 			else
 
-			{
-				trxn.setExpDate(expDate);
+			if ((month == true) || (year == true)) {
+
+				{
+					trxn.setExpDate(expDate);
+				}
 			}
 
 			if (count == 0) {
