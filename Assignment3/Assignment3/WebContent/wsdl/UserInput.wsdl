@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://service.mcds5510.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://service.mcds5510.com" xmlns:intf="http://service.mcds5510.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://service.mcds5510.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="updateEntry">
+    <complexType>
+     <sequence>
+      <element name="ID" type="xsd:string"/>
+      <element name="NameOnCard" type="xsd:string"/>
+      <element name="CardNumber" type="xsd:string"/>
+      <element name="UnitPrice" type="xsd:string"/>
+      <element name="Quantity" type="xsd:string"/>
+      <element name="Month" type="xsd:string"/>
+      <element name="Year" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateEntryResponse">
+    <complexType>
+     <sequence>
+      <element name="updateEntryReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="createEntry">
+    <complexType>
+     <sequence>
+      <element name="ID" type="xsd:int"/>
+      <element name="NameOnCard" type="xsd:string"/>
+      <element name="CardNumber" type="xsd:string"/>
+      <element name="UnitPrice" type="xsd:double"/>
+      <element name="Quantity" type="xsd:int"/>
+      <element name="Month" type="xsd:int"/>
+      <element name="Year" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="createEntryResponse">
+    <complexType>
+     <sequence>
+      <element name="createEntryReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEntry">
+    <complexType>
+     <sequence>
+      <element name="ID" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEntryResponse">
+    <complexType>
+     <sequence>
+      <element name="getEntryReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteEntry">
+    <complexType>
+     <sequence>
+      <element name="ID" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteEntryResponse">
+    <complexType>
+     <sequence>
+      <element name="deleteEntryReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getEntryRequest">
+
+      <wsdl:part element="impl:getEntry" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="createEntryRequest">
+
+      <wsdl:part element="impl:createEntry" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="createEntryResponse">
+
+      <wsdl:part element="impl:createEntryResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteEntryRequest">
+
+      <wsdl:part element="impl:deleteEntry" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateEntryRequest">
+
+      <wsdl:part element="impl:updateEntry" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteEntryResponse">
+
+      <wsdl:part element="impl:deleteEntryResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateEntryResponse">
+
+      <wsdl:part element="impl:updateEntryResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getEntryResponse">
+
+      <wsdl:part element="impl:getEntryResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="UserInput">
+
+      <wsdl:operation name="updateEntry">
+
+         <wsdl:input message="impl:updateEntryRequest" name="updateEntryRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:updateEntryResponse" name="updateEntryResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createEntry">
+
+         <wsdl:input message="impl:createEntryRequest" name="createEntryRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:createEntryResponse" name="createEntryResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getEntry">
+
+         <wsdl:input message="impl:getEntryRequest" name="getEntryRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getEntryResponse" name="getEntryResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteEntry">
+
+         <wsdl:input message="impl:deleteEntryRequest" name="deleteEntryRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:deleteEntryResponse" name="deleteEntryResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="UserInputSoapBinding" type="impl:UserInput">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="updateEntry">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateEntryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateEntryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createEntry">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createEntryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createEntryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getEntry">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getEntryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getEntryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteEntry">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteEntryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteEntryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="UserInputService">
+
+      <wsdl:port binding="impl:UserInputSoapBinding" name="UserInput">
+
+         <wsdlsoap:address location="http://localhost:8081/Assignment3/services/UserInput"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
